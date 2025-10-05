@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- JavaScript -->
+	<script src="index.js" defer></script>
+	<title>Chart Shopping</title>
+</head>
+<body >
+    <div class="container">
+        <header> 
+            <div class="title">PRODUCT LIST</div>
+            <div class="icon_cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span>                  
+            </div>
+        </header>
+
+        <div class="listProduct">
+            <div class="item">
+                <img src="assets/1.png" alt="img">
+                <h2>Name Product</h2>
+                <div class="price">$200</div>
+                <button class="addCart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cartTab">
+        <h1>Shopping cart</h1>
+        <div class="listCart">
+            <div class="item">
+                <div class="image">
+                    <img src="assets/1.png" alt="img">
+                </div>
+                <div class="name">
+                    Name Product
+                </div>
+                <div class="totalPrice">
+                    200$
+                </div>
+                <div class="quantity">
+                    <span class="minus">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </span>
+                    <span class="total_quantity">2</span>
+                    <span class="plus">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </span>
+                    <span class="delete">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="close">Close</button>
+            <button class="checkOut">checkOut</button>
+        </div>
+    </div>
+</body>
+</html>

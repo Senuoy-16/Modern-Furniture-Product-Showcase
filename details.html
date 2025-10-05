@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">PRODUCT LIST</div>
+        <div class="detail">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                <div class="price"></div>
+                <div class="buttons">
+                    <button class="checkOut">Check Out</button>
+                    <button class="addCart">
+                        Add To cart
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+        <div class="title">SIMILAR PRODUCT</div>
+        <div class="listProduct"></div>
+    </div>
+    <script>
+        let Products = null
+        fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            Products = data
+            showdetails()
+        })
+
+        /*find this product*/
+        function showdetails(){
+            let detail =  document.querySelector(".detail")
+            let productId = new URLSearchParams(window.location.search).get("id")
+            let thisProduct = Products.filter(value =>{
+                return value.id == productId
+            })[0]
+            if(!thisProduct){
+                window.location.href = "/"
+            }
+
+            detail.querySelector(".image img").src = thisProduct.image
+            detail.querySelector(".name").innerHTML = thisProduct.name
+            detail.querySelector(".price").innerHTML = '$' + thisProduct.price 
+            detail.querySelector(".description").innerHTML =  thisProduct.description
+            
+            let listProduct = document.querySelector(".listProduct");
+
+            (Products.filter(value => value.id != productId))
+            .forEach((product) => {
+                let newProduct = document.createElement("a")
+                newProduct.href = "details.html?id=" + product.id
+                newProduct.classList.add("item")
+                newProduct.innerHTML = `
+                    <img src=${product.image} alt="">
+                    <h2>${product.name}</h2>
+                    <div class="price">$${product.price}</div>
+                `
+                listProduct.appendChild(newProduct)
+            });
+        
+        }
+    </script>
+</body>
+</html>

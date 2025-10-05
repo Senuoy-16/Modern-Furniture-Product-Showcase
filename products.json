@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "LD01 LOUNGE CHAIR",
+        "price": 200,
+        "image": "assets/1.png",
+        "description": "Un fauteuil lounge élégant avec un design moderne et un confort exceptionnel, idéal pour votre salon ou bureau."
+    },
+    {
+        "id": 2,
+        "name": "LD02 LOUNGE CHAIR",
+        "price": 250,
+        "image": "assets/2.png",
+        "description": "Un fauteuil lounge raffiné avec un revêtement en tissu doux et un cadre robuste, parfait pour une ambiance cosy."
+    },
+    {
+        "id": 3,
+        "name": "LD03 LOUNGE CHAIR",
+        "price": 290,
+        "image": "assets/3.png",
+        "description": "Fauteuil au design contemporain avec un dossier ergonomique et des matériaux haut de gamme pour un confort optimal."
+    },
+    {
+        "id": 4,
+        "name": "LD04 LOUNGE CHAIR",
+        "price": 200,
+        "image": "assets/4.png",
+        "description": "Un fauteuil lounge élégant avec des lignes épurées et un revêtement en cuir synthétique pour un look sophistiqué."
+    },
+    {
+        "id": 5,
+        "name": "LD05 LOUNGE CHAIR",
+        "price": 300,
+        "image": "assets/5.png",
+        "description": "Un fauteuil luxueux avec des accoudoirs en bois et un rembourrage moelleux, idéal pour se détendre après une longue journée."
+    },
+    {
+        "id": 6,
+        "name": "LD06 LOUNGE CHAIR",
+        "price": 200,
+        "image": "assets/6.png",
+        "description": "Un fauteuil minimaliste avec une structure en métal et un tissu respirant, parfait pour une décoration moderne."
+    },
+    {
+        "id": 7,
+        "name": "LD07 LOUNGE CHAIR",
+        "price": 200,
+        "image": "assets/7.png",
+        "description": "Fauteuil lounge au style rétro avec une assise profonde et un dossier inclinable pour un confort maximal."
+    },
+    {
+        "id": 8,
+        "name": "LD08 LOUNGE CHAIR",
+        "price": 200,
+        "image": "assets/8.png",
+        "description": "Un fauteuil lounge polyvalent avec un revêtement en velours doux et des pieds en bois massif, idéal pour tout intérieur."
+    }
+]
